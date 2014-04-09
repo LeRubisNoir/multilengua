@@ -1,0 +1,27 @@
+<h1>Listing vocables</h1>
+
+<table>
+  <tr>
+    <th>English</th>
+    <th>German</th>
+    <th>Sweden</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @vocables.each do |vocable| %>
+  <tr>
+    <td><%= vocable.english %></td>
+    <td><%= vocable.german %></td>
+    <td><%= vocable.sweden %></td>
+    <!--<td><%= link_to 'Show', vocable %></td>
+    <td><%= link_to 'Edit', edit_vocable_path(vocable) %></td>
+    <td><%= link_to 'Destroy', vocable, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<!--<%= link_to 'New Vocable', new_vocable_path %>-->
