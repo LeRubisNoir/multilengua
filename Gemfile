@@ -40,3 +40,8 @@ gem 'jquery-ui-rails'
 # To use debugger
 # gem 'debugger'
 
+
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0.0.beta'
+  gem 'awesome_print'
+end
