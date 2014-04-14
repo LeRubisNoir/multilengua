@@ -1,8 +1,10 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.17'
+gem 'cucumber', '~> 1.3.14'
 
 gem 'activeadmin'
+gem 'database_cleaner'
 gem "factory_girl_rails", "~> 4.0"
 
 # Bundle edge Rails instead:
@@ -45,4 +47,12 @@ gem 'jquery-ui-rails'
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0.beta'
   gem 'awesome_print'
+end
+
+gem "slim-rails"
+
+#gem 'sass'
+gem 'foundation-rails'
+group :test do
+	gem 'cucumber-rails'
 end

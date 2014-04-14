@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    title
+      | Multilengua
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  body
+
+    nav.top-bar
+     /! Left Nav Section
+     ul.left-ul
+       li
+         a href="#"  Left button
+     /! Right Nav Section
+     ul.right-ul
+       li
+         a href="#"  Right button
+     
+
+    div id="content"
+      = yield
+    
+
+    
