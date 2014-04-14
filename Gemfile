@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.17'
 gem 'cucumber', '~> 1.3.14'
-gem 'cucumber-rails'
+
 gem 'activeadmin'
 gem 'database_cleaner'
 # Bundle edge Rails instead:
@@ -45,4 +45,8 @@ gem 'jquery-ui-rails'
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0.beta'
   gem 'awesome_print'
+end
+
+group :test do
+	gem 'cucumber-rails'
 end
