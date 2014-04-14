@@ -25,13 +25,13 @@ Feature: Manage menu
 
 	Scenario: Select Login
 	Given I have the menu opened 
-	And I'm not logged in
+	And I'm not loged in
 	When I click Login icon
 	Then I should change page to Login
 
-	Scenario: Select Logoff
+	Scenario: Select Log out
 	Given I have the menu opened
-	And I'm logged in
+	And I'm loged in
 	When I click logoff icon
-	Then I should be logged off
+	Then I should be loged off
 	And I'm redirected to home page
