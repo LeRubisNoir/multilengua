@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.17'
-
+gem 'cucumber', '~> 1.3.14'
 gem 'activeadmin'
 
 # Bundle edge Rails instead:
