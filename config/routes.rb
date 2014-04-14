@@ -7,7 +7,7 @@ Multilengua::Application.routes.draw do
 
   resources :posts
 
-
+  match '/contact' => 'static_pages#contact'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
