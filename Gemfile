@@ -45,3 +45,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0.0.beta'
   gem 'awesome_print'
 end
+
+gem 'slim' 
+gem 'foundation-rails'
+gem "slim-rails"
