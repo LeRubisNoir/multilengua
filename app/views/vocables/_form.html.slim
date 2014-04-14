@@ -1,0 +1,24 @@
+= form_for(@vocable) do |f|
+  - if @vocable.errors.any?
+    #error_explanation
+      h2
+        = pluralize(@vocable.errors.count, "error")
+        |  prohibited this vocable from being saved:
+      ul
+        - @vocable.errors.full_messages.each do |msg|
+          li
+            = msg
+  .field
+    = f.label :english
+    br
+    = f.text_field :english
+  .field
+    = f.label :german
+    br
+    = f.text_field :german
+  .field
+    = f.label :sweden
+    br
+    = f.text_field :sweden
+  .actions
+    = f.submit

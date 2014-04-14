@@ -1,0 +1,17 @@
+p#notice
+  = notice
+p
+  b
+    | English:
+  = @vocable.english
+p
+  b
+    | German:
+  = @vocable.german
+p
+  b
+    | Sweden:
+  = @vocable.sweden
+= link_to 'Edit', edit_vocable_path(@vocable)
+|  | 
+= link_to 'Back', vocables_path

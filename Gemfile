@@ -46,6 +46,6 @@ group :development, :test do
   gem 'awesome_print'
 end
 
-gem 'slim'
 gem 'sass'
-gem 'foundation'
+gem 'foundation-rails'
+gem "slim-rails"
