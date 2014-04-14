@@ -2,8 +2,9 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.17'
 gem 'cucumber', '~> 1.3.14'
+gem 'cucumber-rails'
 gem 'activeadmin'
-
+gem 'database_cleaner'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
