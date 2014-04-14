@@ -5,6 +5,8 @@ gem 'cucumber', '~> 1.3.14'
 
 gem 'activeadmin'
 gem 'database_cleaner'
+gem "factory_girl_rails", "~> 4.0"
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
