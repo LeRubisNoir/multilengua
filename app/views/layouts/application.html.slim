@@ -1,16 +1,16 @@
 doctype html
 html
   head
+    javascript:
+     $(document).foundation({ offcanvas : {  close_on_click : true,}});
     title
       | Multilengua
     = stylesheet_link_tag    "application", :media => "all"
     = stylesheet_link_tag "foundation.min"
     = javascript_include_tag "application"
-    = javascript_include_tag "foundation/foundation"
-    = javascript_include_tag "foundation/foundation.offcanvas"
+    = javascript_include_tag 'vendor/modernizr'
+    = javascript_include_tag 'vendor/jquery'
     = csrf_meta_tags
-    javascript:
-      $(document).foundation();
   body
    .off-canvas-wrap data-offcanvas="" 
    .inner-wrap
@@ -31,6 +31,3 @@ html
      a.exit-off-canvas
      div id="content"
        = yield
-    
-
-    
