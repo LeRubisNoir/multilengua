@@ -8,11 +8,6 @@ Feature: Manage menu
 	When I click about icon
 	Then I should change page to About
 
-	Scenario: Select Contact
-	Given I have the menu opened
-	When I click contact icon
-	Then I should change page to contact
-
 	Scenario: Select Help
 	Given I have the menu opened
 	When I click help icon
