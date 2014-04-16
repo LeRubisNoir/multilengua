@@ -1,4 +1,4 @@
-require 'spec_helper'
+require '../spec_helper'
 
 describe Score do
   before :each do
