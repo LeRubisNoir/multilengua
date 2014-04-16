@@ -3,8 +3,14 @@ class ExerciseController < ApplicationController
     def print_question
         
         #Init session id compteur nombre question repondu
-        if session[:cpt_question].blank?
-          session[:cpt_question] = 0
+        #if session[:cpt_question].blank?
+        #session[:cpt_question] = 0
+        #end
+        
+        @hack = params[:hack].to_i
+        
+        if @hack.blank?
+            @hack = 0
         end
         
         #Anais/Clement : init score si existe pas
@@ -23,7 +29,9 @@ class ExerciseController < ApplicationController
     end
     
     def check
-
+        
+        @hack = params[:hack].to_i
+        
         @question = params[:question]
         @answer1 = params[:answer1]
         @answer2 = params[:answer2]
@@ -40,15 +48,18 @@ class ExerciseController < ApplicationController
         
         #aw session[:cpt_question]
         #session[:cpt_question] = session[:cpt_question] + 1
+        @hack = @hack + 1
         
     end
     
     def next_redirect
- 
-        if session[:cpt_question] == 5
+        
+        @hack = params[:hack].to_i
+        
+        if @hack == 3
           redirect_to action: 'congratz'
         else
-          redirect_to action: 'print_question'
+        redirect_to :action=>'print_question', :hack=>@hack
         end
         
     end
