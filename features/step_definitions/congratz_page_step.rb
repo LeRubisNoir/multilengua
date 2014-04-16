@@ -1,5 +1,5 @@
 Given(/^I am on the Congratz page$/) do
-  pending # express the regexp above with the code you wish you had
+  visit congratz_path
 end
 
 Then(/^I should see title "(.*?)" in the selector "(.*?)"$/) do |title, selector|
@@ -11,10 +11,10 @@ Then(/^I should see text "(.*?)" in the selector "(.*?)"$/) do |text, selector|
 end
 
 Then(/^I should see the text "(.*?)" in the selector "(.*?)" with the class "(.*?)"$/) do |text, selector, class_name|
-  pending # express the regexp above with the code you wish you had
+  expect(congratz_path).to have_css selector.concat(".").concat(class_name) ,text: text 
 end
 
 Then(/^I should see the button with the text "(.*?)" in the selector "(.*?)" with the class "(.*?)"$/) do |text, selector, class_name|
-  pending # express the regexp above with the code you wish you had
+  expect(congratz_path).to have_css selector.concat(".").concat(class_name) ,text: text
 end
 
