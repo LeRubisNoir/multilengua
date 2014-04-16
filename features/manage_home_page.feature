@@ -5,9 +5,8 @@ Feature: Manage home page
 
 
 	Scenario: Show homepage
-	Given I have click on the website url
-	When I arrived on the home page
-	Then I should see a e-learning website
+	Given I have write the url website
+	Then I can see the home page view
 
 	Scenario: Select try game
 	Given I have reach the home page

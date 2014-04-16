@@ -1,15 +1,11 @@
-Given(/^I have click on the website url$/) do
+Given(/^I have write the url website$/) do
   visit home_page_path
   #pending # express the regexp above with the code you wish you had
 end
 
-When(/^I arrived on the home page$/) do
+Then(/^I can see the home page view$/) do
   expect(home_page_path).to have_selector h1,text: "homepage"
   #pending # express the regexp above with the code you wish you had
-end
-
-Then(/^I should see a e\-learning website$/) do
-  pending # express the regexp above with the code you wish you had
 end
 
 Given(/^I have reach the home page$/) do
