@@ -1,15 +1,15 @@
 Given(/^I have write the url website$/) do
-  visit home_page_path
+  visit home_path
   #pending # express the regexp above with the code you wish you had
 end
 
 Then(/^I can see the home page view$/) do
-  expect(home_page_path).to have_selector h1,text: "Home Page"
+  page.should have_selector 'h1', text: "Home Page"
   #pending # express the regexp above with the code you wish you had
 end
 
 Given(/^I have reach the home page$/) do
-  expect(home_page_path).to have_selector h1,text: "Home Page"
+  expect(home_path).to have_selector h1,text: "Home Page"
   #pending # express the regexp above with the code you wish you had
 end
 
