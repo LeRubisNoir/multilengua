@@ -1,4 +1,8 @@
 Multilengua::Application.routes.draw do
+  get "exercise/print_question"
+  post "exercise/check"
+  get "exercise/next_redirect"
+
   resources :vocables
 
 
