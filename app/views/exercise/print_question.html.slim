@@ -1,4 +1,6 @@
-h1 
+p
+  = debug(session)
+h1
   | Exercise type 1
 h3
   | Find the translation of the word:
@@ -10,43 +12,61 @@ p
 form method="POST" action="check"
 
   input[
-    type="radio" 
-    name="anwser"
-    value="answer1"] = @answer1
+    type="hidden"
+    name="question"
+    value=@question]
+
   input[
     type="hidden"
-    name="anwser1"
-    value="= @answer1"]
+    name="result"
+    value=@result]
+
+  input[
+    type="radio" 
+    name="answer"
+    value=@answer1] = @answer1
+
+  input[
+    type="hidden"
+    name="answer1"
+    value=@answer1]
+
   br
 
   input[
     type="radio" 
-    name="anwser"
-    value="answer2"] = @answer2
+    name="answer"
+    value=@answer2] = @answer2
+
   input[
     type="hidden"
-    name="anwser2"
-    value="| = @answer2"]
+    name="answer2"
+    value=@answer2]
+
   br
 
   input[
     type="radio" 
-    name="anwser"
-    value="answer3"] = @answer3
+    name="answer"
+    value=@answer3] = @answer3
+
   input[
     type="hidden"
-    name="anwser3"
-    value="| = @answer3"]
+    name="answer3"
+    value=@answer3]
+
   br
 
   input[
     type="radio" 
-    name="anwser"
-    value="answer4"] = @answer4
+    name="answer"
+    value=@answer4] = @answer4
+
   input[
     type="hidden"
-    name="anwser4"
-    value="| = @answer4"]
+    name="answer4"
+    value=@answer4]
+
   br
   
   input type="submit" value="Send"
