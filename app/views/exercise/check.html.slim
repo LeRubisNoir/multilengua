@@ -1,5 +1,3 @@
-p
-  = debug(session)
 
 h1
   | Exercise type 1
@@ -41,6 +39,4 @@ table
 
 br
 
-a[
-  href="next_redirect" 
-  title=("Next redirect")] Next
+a=link_to("Next", "next_redirect?hack=#{@hack}")
