@@ -4,12 +4,12 @@ Given(/^I have write the url website$/) do
 end
 
 Then(/^I can see the home page view$/) do
-  expect(home_page_path).to have_selector h1,text: "homepage"
+  expect(home_page_path).to have_selector h1,text: "Home Page"
   #pending # express the regexp above with the code you wish you had
 end
 
 Given(/^I have reach the home page$/) do
-  expect(home_page_path).to have_selector h1,text: "homepage"
+  expect(home_page_path).to have_selector h1,text: "Home Page"
   #pending # express the regexp above with the code you wish you had
 end
 
