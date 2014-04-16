@@ -1,4 +1,6 @@
 Multilengua::Application.routes.draw do
+  get "exercise/type1"
+
   resources :vocables
 
 
