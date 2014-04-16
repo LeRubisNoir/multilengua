@@ -53,6 +53,15 @@ gem "slim-rails"
 
 #gem 'sass'
 gem 'foundation-rails'
+
+group :assets do
+  gem 'sass-rails',   '~> 3.2.3'
+  gem 'coffee-rails', '~> 3.2.1'
+
+  # Add these gems
+  gem 'compass-rails'
+  gem 'zurb-foundation'
+end
 group :test do
 	gem 'cucumber-rails'
 end

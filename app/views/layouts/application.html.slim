@@ -7,6 +7,24 @@ html
     = javascript_include_tag "application"
     = csrf_meta_tags
   body
+  .off-canvas-wrap data-offcanvas="" 
+  .inner-wrap
+    nav.tab-bar
+      section.left-small
+        a.left-off-canvas-toggle.menu-icon href="#" 
+          span
+    aside.left-off-canvas-menu
+      ul.off-canvas-list
+        li
+          label Foundation
+        li
+          a href="#"  The Psychohistorians
+        li
+          a href="#"  ...
+    section.main-section
+      /! content goes here
+    a.exit-off-canvas
+
 
     nav.top-bar
      /! Left Nav Section
