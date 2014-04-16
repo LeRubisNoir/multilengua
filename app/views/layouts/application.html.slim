@@ -5,10 +5,12 @@ html
       | Multilengua
     = stylesheet_link_tag    "application", :media => "all"
     = stylesheet_link_tag "foundation.min"
-    = javascript_include_tag "/javascripts/application.js"
-    = javascript_include_tag  "/javascripts/foundation/foundation.js"
-    = javascript_include_tag  "/javascripts/foundation/foundation.offcanvas.js"
+    = javascript_include_tag "application"
+    = javascript_include_tag "foundation/foundation"
+    = javascript_include_tag "foundation/foundation.offcanvas"
     = csrf_meta_tags
+    javascript:
+      $(document).foundation();
   body
    .off-canvas-wrap data-offcanvas="" 
    .inner-wrap
