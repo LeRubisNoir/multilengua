@@ -18,7 +18,7 @@ When(/^I click on (.*?) $/) do |button|
   #pending # express the regexp above with the code you wish you had
 end
 
-Then(/^I shoud reach "(.*?)"$/) do |arg1|
+Then(/^I shoud see "(.*?)"$/) do |arg1|
   expect(try_game_path).to have_selector h1,text: "Trygame"
   #pending # express the regexp above with the code you wish you had
 end

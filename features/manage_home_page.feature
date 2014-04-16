@@ -11,4 +11,4 @@ Feature: Manage home page
 	Scenario: Select try game
 	Given I have reach the home page
 	When I click on try button
-	Then I shoud reach "try page"
+	Then I should see "try page"
