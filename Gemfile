@@ -6,7 +6,7 @@ gem 'sass-rails'
 gem 'activeadmin'
 gem 'database_cleaner'
 gem "factory_girl_rails", "~> 4.0"
-
+gem 'therubyracer', :platforms => :ruby
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
@@ -37,7 +37,7 @@ group :development, :test do
 end
 
 gem "slim-rails"
-
+gem "coffee-rails"
 
 group :test do
 	gem 'cucumber-rails'

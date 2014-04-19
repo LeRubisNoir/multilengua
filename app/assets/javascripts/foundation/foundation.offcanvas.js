@@ -33,7 +33,7 @@
           self.click_remove_class(e, 'move-left');
           self.click_remove_class(e, 'move-right');
         })
-    },
+     },
 
     click_toggle_class: function(e, class_name) {
       e.preventDefault();
