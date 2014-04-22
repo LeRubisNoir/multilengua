@@ -6,8 +6,8 @@ class ExerciseController < ApplicationController
         
         #Anaïs/Clement : init score si existe pas
 				if !@myscore
-					@myscore = Score.create
-					@myscore.score = 0
+					@myscore = Score.create.first
+					@myscore.attributes = {score: "0"}
 				end
 				
         

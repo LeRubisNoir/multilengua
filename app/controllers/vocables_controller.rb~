@@ -1,5 +1,5 @@
 class VocablesController < InheritedResources::Base
 	def index
-		@myscore = Score.all.first.score
+		@myscore = Scores.all.first.score
 	end
 end

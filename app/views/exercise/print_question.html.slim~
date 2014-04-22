@@ -51,7 +51,5 @@ form method="POST" action="check"
   
   input type="submit" value="Send"
 
-table#score
-  tr
-    td Score : = @myscore
+
 
