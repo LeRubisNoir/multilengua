@@ -4,33 +4,20 @@ html
     title
       | Multilengua
     = stylesheet_link_tag    "application", :media => "all"
-    = stylesheet_link_tag "foundation.min"
     = javascript_include_tag "application"
-    = javascript_include_tag "foundation/foundation"
-    = javascript_include_tag "foundation/foundation.offcanvas"
     = csrf_meta_tags
-    javascript:
-      $(document).foundation();
   body
-   .off-canvas-wrap data-offcanvas="" 
-   .inner-wrap
-     nav.tab-bar
-       section.left-small
-         a.left-off-canvas-toggle.menu-icon href="#" 
-           span Menu
-     aside.left-off-canvas-menu
-       ul.off-canvas-list
-         li
-           label Foundation
-         li
-           a href="#"  The Psychohistorians
-         li
-           a href="#"  ...
-     section.main-section
-       /! content goes here
-     a.exit-off-canvas
-     div id="content"
-       = yield
-    
 
-    
+    nav.top-bar
+     /! Left Nav Section
+     ul.left-ul
+       li
+         a href="#"  Left button
+     /! Right Nav Section
+     ul.right-ul
+       li
+         a href="#"  Right button
+     
+
+    div id="content"
+      = yield
