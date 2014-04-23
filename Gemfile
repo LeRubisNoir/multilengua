@@ -6,6 +6,9 @@ gem 'activeadmin'
 gem 'database_cleaner'
 gem "factory_girl_rails", "~> 4.0"
 gem 'therubyracer', :platforms => :ruby
+gem 'devise'
+gem 'omniauth-google-oauth2'
+
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
