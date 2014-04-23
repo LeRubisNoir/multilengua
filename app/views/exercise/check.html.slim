@@ -1,3 +1,48 @@
-h1 
+
+h1
   | Exercise type 1
 
+br
+br
+h2
+  | Result:
+  = @result_string
+br
+br
+
+
+h3
+  | The word to translate is:
+h2
+  = @question
+
+p
+  | Answers :
+
+table
+  tr
+
+    td 
+      = @answer1
+  tr
+
+    td 
+      = @answer2
+  tr
+
+    td 
+      = @answer3
+  tr
+
+    td 
+      = @answer4
+
+br
+
+table#score
+  tr
+    td 
+      | Score : 
+      = @myscore.score
+
+a=link_to("Next", "next_redirect?hack=#{@hack}")

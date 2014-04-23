@@ -1,12 +1,11 @@
 class CreateScores < ActiveRecord::Migration
   def change
-    create_table :scores do |t|
-      t.integer :user_id
-      t.integer :score
-      t.integer :exo_id
-      t.text :session
 
-      t.timestamps
-    end
+  	remove_column :scores, :ip
+  	remove_column :scores, :note
+
+  	add_column :scores, :score, :integer
+  	add_column :scores, :session, :string
+
   end
 end
