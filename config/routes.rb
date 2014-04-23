@@ -1,11 +1,12 @@
 Multilengua::Application.routes.draw do
+  devise_for :users
   resources :vocable_groups
-
 
   get "exercise/print_question"
   post "exercise/check"
   get "exercise/next_redirect"
   get "exercise/congratz"
+  get "exercise/login"
 
   resources :vocables
 
@@ -19,7 +20,11 @@ Multilengua::Application.routes.draw do
   match '/home' => 'static_pages#home_page'
 
   root :to => 'static_pages#home_page'
-  # The priority is based upon order of creation:
+  
+  
+  #devise_for :users, controllers: { omniauth_callbacks: "omniauth_callbacks" }
+  
+    # The priority is based upon order of creation:
   # first created -> highest priority.
 
   # Sample of regular route:
