@@ -13,6 +13,9 @@ Multilengua::Application.routes.draw do
   resources :posts
 
   match '/contact' => 'static_pages#contact'
+  match '/home' => 'static_pages#home_page'
+
+  root :to => 'static_pages#home_page'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
