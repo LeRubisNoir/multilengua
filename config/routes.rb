@@ -1,4 +1,6 @@
 Multilengua::Application.routes.draw do
+  devise_for :users
+
   get "exercise/print_question"
   post "exercise/check"
   get "exercise/next_redirect"
@@ -16,7 +18,7 @@ Multilengua::Application.routes.draw do
   match '/home' => 'static_pages#home_page'
 
   root :to => 'static_pages#home_page'
-  # The priority is based upon order of creation:
+    # The priority is based upon order of creation:
   # first created -> highest priority.
 
   # Sample of regular route:
