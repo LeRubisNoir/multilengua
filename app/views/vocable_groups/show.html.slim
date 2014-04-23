@@ -1,0 +1,9 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @vocable_group.name
+
+= link_to 'Edit', edit_vocable_group_path(@vocable_group)
+'|
+= link_to 'Back', vocable_groups_path

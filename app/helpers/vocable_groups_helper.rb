@@ -1,0 +1,2 @@
+module VocableGroupsHelper
+end

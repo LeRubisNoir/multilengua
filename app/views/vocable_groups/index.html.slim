@@ -1,0 +1,21 @@
+h1 Listing vocable_groups
+
+table
+  thead
+    tr
+      th Name
+      th
+      th
+      th
+
+  tbody
+    - @vocable_groups.each do |vocable_group|
+      tr
+        td = vocable_group.name
+        td = link_to 'Show', vocable_group
+        td = link_to 'Edit', edit_vocable_group_path(vocable_group)
+        td = link_to 'Destroy', vocable_group, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Vocable group', new_vocable_group_path
