@@ -7,6 +7,10 @@ gem 'database_cleaner'
 gem "factory_girl_rails", "~> 4.0"
 gem 'therubyracer', :platforms => :ruby
 
+gem 'ci_reporter'
+gem 'selenium-webdriver'
+gem 'selenium'
+gem 'addressable'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
