@@ -5,32 +5,36 @@ html
       | Multilengua
     = stylesheet_link_tag    "application", :media => "all"
     = stylesheet_link_tag "foundation.min"
-    = javascript_include_tag "application"
-    = javascript_include_tag "foundation/foundation"
-    = javascript_include_tag "foundation/foundation.offcanvas"
+    = javascript_include_tag 'application'
     = csrf_meta_tags
-    javascript:
-      $(document).foundation();
+
   body
-   .off-canvas-wrap data-offcanvas="" 
-   .inner-wrap
-     nav.tab-bar
-       section.left-small
-         a.left-off-canvas-toggle.menu-icon href="#" 
-           span Menu
+   .off-canvas-wrap
+    .inner-wrap
+     .fixed
+       nav.tab-bar.top-bar
+         section.left-small
+           a.left-off-canvas-toggle.menu-icon
+             span
+         section.middle.tab-bar-section
+           h1.title Multilangua
+         section.right-small
      aside.left-off-canvas-menu
        ul.off-canvas-list
          li
-           label Foundation
+           label Menu
          li
-           a href="#"  The Psychohistorians
-         li
-           a href="#"  ...
-     section.main-section
-       /! content goes here
-     a.exit-off-canvas
+           a href="#"  Home
+           a href="#"  Game
+           a href="contact"  Contact
      div id="content"
        = yield
-    
+   = javascript_include_tag 'vendor/jquery'
+   = javascript_include_tag 'vendor/jquery.min'
+   = javascript_include_tag 'foundation/foundation'
+   = javascript_include_tag 'foundation/foundation.offcanvas'
 
-    
+   javascript:
+    $(document).ready(function () {
+     $(document).foundation();
+    })
