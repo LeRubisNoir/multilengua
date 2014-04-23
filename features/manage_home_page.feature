@@ -7,7 +7,7 @@ Feature: Manage home page
 	Scenario: Show homepage
 	Given I have write the url website
         Then I should see "Home Page" in the selector "h1"
-
+       
 	Scenario: Select try game
 	Given I have reach the home page
 	When I click on try button
