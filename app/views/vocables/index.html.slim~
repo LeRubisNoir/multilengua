@@ -1,0 +1,7 @@
+h1
+  | Listing vocables
+
+table#score
+  tr
+    td Score : 
+			= @myscore

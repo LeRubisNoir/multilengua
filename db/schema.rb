@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140423082531) do
+ActiveRecord::Schema.define(:version => 20140423120234) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -52,6 +52,13 @@ ActiveRecord::Schema.define(:version => 20140423082531) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "scores", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "score"
+    t.string   "session"
+  end
+
   create_table "vocable_groups", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false
@@ -62,8 +69,9 @@ ActiveRecord::Schema.define(:version => 20140423082531) do
     t.string   "english"
     t.string   "german"
     t.string   "sweden"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+    t.integer  "vocable_group_id"
   end
 
 end

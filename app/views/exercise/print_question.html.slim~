@@ -1,0 +1,55 @@
+h1 
+  | Exercise type 1
+h3
+  | Find the translation of the word:
+h2
+  = @question
+p
+  | Answers :
+
+form method="POST" action="check"
+
+  input[
+    type="radio" 
+    name="anwser"
+    value="answer1"] = @answer1
+  input[
+    type="hidden"
+    name="anwser1"
+    value="= @answer1"]
+  br
+
+  input[
+    type="radio" 
+    name="anwser"
+    value="answer2"] = @answer2
+  input[
+    type="hidden"
+    name="anwser2"
+    value="| = @answer2"]
+  br
+
+  input[
+    type="radio" 
+    name="anwser"
+    value="answer3"] = @answer3
+  input[
+    type="hidden"
+    name="anwser3"
+    value="| = @answer3"]
+  br
+
+  input[
+    type="radio" 
+    name="anwser"
+    value="answer4"] = @answer4
+  input[
+    type="hidden"
+    name="anwser4"
+    value="| = @answer4"]
+  br
+  
+  input type="submit" value="Send"
+
+
+
