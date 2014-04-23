@@ -1,49 +1,40 @@
 Given(/^I have the menu opened$/) do
-  
+   visit home_path
+   find("a#menu.left-off-canvas-toggle.menu-icon").click  
 end
 
 When(/^I click about icon$/) do
-  within("#about_icon") do      
-    find(:link, "About").click
-  end
+    find("#about_icon").click
 end
 
 Then(/^I should change page to About$/) do
-  request.request_uri.should == send("abouts_path")
-  response.should be_success
+  assert page.current_path == about_path
 end
 
 When(/^I click contact icon$/) do
-  within("#contact_icon") do          
-    find(:link, "Contact").click
-  end
+  sleep(2)
+  find("#contact_icon").click
 end
 
 Then(/^I should change page to contact$/) do
-  request.request_uri.should == send("contacts_path")
-  response.should be_success
+  sleep(2)
+  assert page.current_path == contact_path
 end
 
 When(/^I click help icon$/) do
-  within("#help_icon") do
-    find(:link, "Help").click
-  end
+   find("#help_icon").click
 end
 
 Then(/^I should change page to Help$/) do
-  request.request_uri.should == send("helps_path")
-  response.should be_success
+  assert page.current_path == help_path
 end
 
 When(/^I click home icon$/) do
-  within("#home_icon") do
-    find(:link, "Home").click
-  end
+  find("#home_icon").click
 end
 
 Then(/^I should change page to Home$/) do
-  request.request_uri.should == send("homes_path")
-  response.should be_success
+  assert page.current_path == home_path
 end
 
 Given(/^I'm not loged in$/) do
@@ -53,9 +44,7 @@ Given(/^I'm not loged in$/) do
 end
 
 When(/^I click Login icon$/) do
-  within("#login_icon") do
-    find(:link, "Login").click
-  end
+  find("#login_icon").click
 end
 
 Then(/^I should change page to Login$/) do
