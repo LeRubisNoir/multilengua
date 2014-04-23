@@ -13,7 +13,12 @@ class ExerciseController < ApplicationController
             @hack = 0
         end
         
-        #Anais/Clement : init score si existe pas
+        #Anaïs/Clement : init score si existe pas
+		if @myscore.blank?
+			@myscore = Score.create
+			@myscore.score = 0
+		end
+				
         
         @vocables = Vocable.all.sample(4)
         @vocable_true = @vocables[Random.rand(0...3)]
@@ -22,13 +27,16 @@ class ExerciseController < ApplicationController
         @answer1 = @vocables[0].sweden
         @answer2 = @vocables[1].sweden
         @answer3 = @vocables[2].sweden
-        @answer4 = @vocables[3].sweden
-        
-        #@score = (valeur actuel)
-        
+        @answer4 = @vocables[3].sweden        
     end
     
     def check
+
+                #Anaïs/Clement : init score si existe pas
+        if @myscore.blank?
+            @myscore = Score.create
+             @myscore.score = params[:score_session].to_i
+        end
         
         @hack = params[:hack].to_i
         
@@ -37,13 +45,16 @@ class ExerciseController < ApplicationController
         @answer2 = params[:answer2]
         @answer3 = params[:answer3]
         @answer4 = params[:answer4]
+
         
         if params[:answer] == params[:result]
             #Anais/Clement : increment score
           @result_string = "OK"
+          @myscore.score =  @myscore.score + 1
         else
           @result_string = "NOK"
         end
+
         
         
         #aw session[:cpt_question]

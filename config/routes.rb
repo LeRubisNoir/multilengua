@@ -1,5 +1,6 @@
 Multilengua::Application.routes.draw do
   devise_for :users
+  resources :vocable_groups
 
   get "exercise/print_question"
   post "exercise/check"

@@ -14,7 +14,7 @@ html
      .fixed
        nav.tab-bar.top-bar
          section.left-small
-           a.left-off-canvas-toggle.menu-icon
+           a#menu.left-off-canvas-toggle.menu-icon
              span
          section.middle.tab-bar-section
            h1.title Multilangua
@@ -24,9 +24,10 @@ html
          li
            label Menu
          li
-           a href="#"  Home
-           a href="#"  Game
-           a href="contact"  Contact
+           a href="home" id="home_icon" Home
+           a href="about" id="about_icon"  About
+           a href="contact" id="contact_icon" Contact
+           a href="help" id="help_icon" Help
      div id="content"
        = yield
    = javascript_include_tag 'vendor/jquery'

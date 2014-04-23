@@ -11,7 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(:version => 20140423103309) do
+=======
+ActiveRecord::Schema.define(:version => 20140423133224) do
+>>>>>>> 607267478aa19258be324a7987a4e3ccb11f5ed7
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -52,6 +56,13 @@ ActiveRecord::Schema.define(:version => 20140423103309) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "scores", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "score"
+    t.string   "session"
+  end
+
   create_table "sessions", :force => true do |t|
     t.string   "session_id", :null => false
     t.text     "data"
@@ -80,12 +91,19 @@ ActiveRecord::Schema.define(:version => 20140423103309) do
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
 
+  create_table "vocable_groups", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "vocables", :force => true do |t|
     t.string   "english"
     t.string   "german"
     t.string   "sweden"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+    t.integer  "vocable_group_id"
   end
 
 end

@@ -39,4 +39,10 @@ table
 
 br
 
+table#score
+  tr
+    td 
+      | Score : 
+      = @myscore.score
+
 a=link_to("Next", "next_redirect?hack=#{@hack}")

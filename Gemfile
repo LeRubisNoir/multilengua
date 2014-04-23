@@ -11,6 +11,11 @@ gem 'devise'
 gem 'omniauth-google-oauth2', git: 'https://github.com/zquestz/omniauth-google-oauth2.git'
 gem 'omniauth-openid'
 gem 'omniauth'
+gem 'ci_reporter'
+gem 'selenium-webdriver'
+gem 'selenium'
+gem 'addressable'
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
