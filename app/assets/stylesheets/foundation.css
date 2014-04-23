@@ -27,6 +27,8 @@ meta.foundation-data-attribute-namespace {
 html, body {
   height: 100%; }
 
+#content { margin-top: 45px; }
+
 *,
 *:before,
 *:after {
@@ -3887,6 +3889,7 @@ dialog[open] {
   -webkit-backface-visibility: hidden;
   width: 15.625rem;
   top: 0;
+  height:700px;
   bottom: 0;
   position: absolute;
   overflow-y: auto;
