@@ -30,6 +30,9 @@ gem 'jquery-ui-rails'
 # To use debugger
 # gem 'debugger'
 
+group :assets do
+  gem 'coffee-rails'
+end
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0.beta'

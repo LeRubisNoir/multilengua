@@ -12,8 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
-//  require foundation
-//$(document).foundation();
-alert('toto')
+// require_tree .
+//=  require foundation/foundation
+//=  require foundation/foundation.offcanvas
+$(document).foundation();
+//alert('toto')
 //
