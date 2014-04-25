@@ -49,10 +49,12 @@ class ExerciseController < ApplicationController
         
         if params[:answer] == params[:result]
             #Anais/Clement : increment score
-          @result_string = "OK"
+          @result_string = "Success"
+          @result_class = "result_right"
           @myscore.score =  @myscore.score + 1
         else
-          @result_string = "NOK"
+          @result_string = "False"
+          @result_class = "result_wrong"
         end
 
         

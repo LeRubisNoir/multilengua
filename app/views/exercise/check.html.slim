@@ -2,22 +2,16 @@
 h1
   | Exercise type 1
 
-br
-br
 h2
-  | Result:
-  = @result_string
-br
-br
-
+  | Result: 
+  strong class=@result_class = @result_string
 
 h3
-  | The word to translate is:
-h2
-  = @question
+  | Word: 
+  strong = @question
 
 p
-  | Answers :
+  | Translate answers :
 
 table
   tr
@@ -45,4 +39,4 @@ table#score
       | Score : 
       = @myscore.score
 
-a=link_to("Next", "next_redirect?hack=#{@hack}")
+=link_to("Next", "next_redirect?hack=#{@hack}")
