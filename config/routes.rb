@@ -15,7 +15,8 @@ Multilengua::Application.routes.draw do
   ActiveAdmin.routes(self)
 
   resources :posts
-
+  match '/contact' => 'static_pages#contact'
+  
   match '/contact' => 'static_pages#contact'
   match '/home' => 'static_pages#home_page'
 
